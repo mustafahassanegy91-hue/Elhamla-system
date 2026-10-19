@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<!-- ==================== إعدادات الصفحة والترويسات الأساسية ==================== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الحملة الميكانيكية – نظام إدارة النقل</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap">
+
+<!-- مكتبة معالجة ملفات Excel (xlsx) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<!-- مكتبة خرائط جوجل (Google Maps API) للربط الجغرافي والمسارات داخل مصر فقط -->
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&language=ar&region=EG" async defer></script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==================== رأس الصفحة (Header) ==================== -->
+<header>
+  <h1>جامعة قناة السويس / إدارة الحملة الميكانيكية</h1>
+  <span style="flex:1"></span>
+  <small id="sv"></small>
+</header>
+
+<!-- ==================== شريط التنقل العلوي (Navigation Bar) ==================== -->
+<nav id="nav"></nav>
+
+<!-- ==================== المحتوى الرئيسي الديناميكي (Main Container) ==================== -->
+<main id="m"></main>
+
+<!-- ==================== نافذة حوار الإضافة والتعديل (Dialog Modal) ==================== -->
+<dialog id="dl">
+  <form method="dialog" id="fm" onsubmit="return false">
+    <h3 id="dt"></h3>
+    <div class="fg" id="ff"></div>
+    <p class="err" id="er"></p>
+    <div class="bar" style="margin:8px 0 0">
+      <button class="b" id="ok" type="button">حفظ</button>
+      <button class="b g" type="button" id="no">إلغاء</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- ==================== حاوية الطباعة السرية (Print Container) ==================== -->
+<div id="pa"></div>
+
+<!-- ==================== ملفات البرمجة والبيانات ==================== -->
+<script src="data/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
